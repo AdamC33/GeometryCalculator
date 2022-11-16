@@ -21,5 +21,9 @@ else
     Console.WriteLine("The shape is a rectangle");
 }
 
+double side1 = ConsoleDisplay.getSideDoubleTriangle(1);
+double side2 = ConsoleDisplay.getSideDoubleTriangle(2);
+double side3 = ConsoleDisplay.getSideDoubleTriangle(3);
+Console.WriteLine("The triangle is " + Triangle.TypeOfTriangle(side1, side2, side3));
 
 Console.ReadKey();

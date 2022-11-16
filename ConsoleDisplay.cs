@@ -62,4 +62,26 @@ static class ConsoleDisplay
         while (conversionCorrect == false);
         return side;
     }
+    public static double getSideDoubleTriangle(int sideNumber)
+    {
+        bool conversionCorrect = true;
+        double side = 0;
+        do
+        {
+            conversionCorrect = true;
+            Console.WriteLine("Please input side " + sideNumber + " of the triangle. (Double values only)");
+            try
+            {
+                side = Convert.ToDouble(Console.ReadLine());
+            }
+            catch (System.FormatException)
+            {
+                side = 0;
+                conversionCorrect = false;
+                Console.WriteLine("Please only enter double values.");
+            }
+        }
+        while (conversionCorrect == false);
+        return side;
+    }
 }
